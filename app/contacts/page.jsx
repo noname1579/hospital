@@ -90,7 +90,7 @@ export default function Contacts() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">Телефон</h4>
-                      <a href="tel:+79999999999" className="text-blue-600 font-semibold text-lg hover:text-blue-700 transition-colors duration-300">
+                      <a href="#" className="text-blue-600 font-semibold text-lg hover:text-blue-700 transition-colors duration-300">
                         +7 (999) 999-99-99
                       </a>
                       <p className="text-gray-600 text-sm mt-1">Круглосуточно</p>
@@ -103,7 +103,7 @@ export default function Contacts() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">Email</h4>
-                      <a href="mailto:info@medcare.ru" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300">
+                      <a href="#" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300">
                         info@medcare.ru
                       </a>
                     </div>
@@ -135,10 +135,10 @@ export default function Contacts() {
                   При острой боли, травмах и других неотложных состояниях
                 </p>
                 <a 
-                  href="tel:103" 
+                  href="#" 
                   className="block w-full bg-blue-600 text-white text-center py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg"
                 >
-                  📞 103 (Скорая помощь)
+                  103 (Скорая помощь)
                 </a>
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function Contacts() {
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
                         <span className="text-gray-600">Телефон:</span>
-                        <a href={`tel:${currentDepartment.phone}`} className="font-semibold text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                        <a href='#' className="font-semibold text-blue-600 hover:text-blue-700 transition-colors duration-300">
                           {currentDepartment.phone}
                         </a>
                       </div>
@@ -200,7 +200,7 @@ export default function Contacts() {
                       <input 
                         type="text" 
                         placeholder="Иван Иванов" 
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
+                        className="w-full text-gray-900 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
                       />
                     </div>
                     <div>
@@ -208,7 +208,7 @@ export default function Contacts() {
                       <input 
                         type="tel" 
                         placeholder="+7 (___) ___-__-__" 
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
+                        className="w-full text-gray-900 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
                       />
                     </div>
                   </div>
@@ -218,16 +218,16 @@ export default function Contacts() {
                     <input 
                       type="email" 
                       placeholder="email@example.com" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
+                      className="w-full px-4 py-3 border text-gray-900 border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
                     />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Отделение</label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300">
+                    <select className="w-full text-gray-900 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300">
                       <option>Выберите отделение</option>
                       {departments.map((dept) => (
-                        <option key={dept.id}>{dept.name}</option>
+                        <option className='text-gray-900' key={dept.id}>{dept.name}</option>
                       ))}
                     </select>
                   </div>
@@ -237,7 +237,7 @@ export default function Contacts() {
                     <textarea 
                       rows="4"
                       placeholder="Опишите ваш вопрос или проблему..."
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
+                      className="w-full px-4 py-3 border text-gray-900 border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
                     ></textarea>
                   </div>
                   
@@ -250,29 +250,6 @@ export default function Contacts() {
                 </form>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-blue-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
-            Есть вопросы?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Не стесняйтесь обращаться к нам. Мы всегда готовы помочь и ответить на все ваши вопросы.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="tel:+79999999999"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              📞 Позвонить сейчас
-            </a>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
-              📧 Написать на email
-            </button>
           </div>
         </div>
       </section>

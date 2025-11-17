@@ -8,18 +8,18 @@ export default function Footer() {
 
   const navigation = {
     main: [
-      { name: 'Главная', href: '#home' },
-      { name: 'Врачи', href: '#doctors' },
-      { name: 'Услуги', href: '#services' },
-      { name: 'Отзывы', href: '#reviews' },
-      { name: 'Контакты', href: '#contacts' }
+      { name: 'Главная', href: 'home' },
+      { name: 'Врачи', href: 'doctors' },
+      { name: 'Услуги', href: 'services' },
+      { name: 'Отзывы', href: 'reviews' },
+      { name: 'Контакты', href: 'contacts' }
     ],
     services: [
-      { name: 'Терапия', href: '#' },
-      { name: 'Кардиология', href: '#' },
-      { name: 'Неврология', href: '#' },
-      { name: 'Стоматология', href: '#' },
-      { name: 'Диагностика', href: '#' }
+      { name: 'Терапия', href: 'services' },
+      { name: 'Кардиология', href: 'services' },
+      { name: 'Неврология', href: 'services' },
+      { name: 'Стоматология', href: 'services' },
+      { name: 'Диагностика', href: 'services' }
     ],
     contacts: [
       { 
@@ -86,7 +86,7 @@ export default function Footer() {
                     href={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-green-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="w-1 h-1 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     {item.name}
                   </Link>
                 </li>

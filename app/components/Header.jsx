@@ -44,7 +44,7 @@ export default function Header() {
             <div className="flex flex-col text-right text-gray-600">
               <span className="text-sm">Круглосуточно</span>
               <a 
-                href="tel:+79999999999" 
+                href="#" 
                 className="font-bold text-lg hover:text-blue-600 transition-colors duration-300"
               >
                 +7 (999) 999-99-99
@@ -91,7 +91,7 @@ export default function Header() {
               
               <div className="pt-4 border-t border-gray-200 space-y-4">
                 <a 
-                  href="tel:+79999999999" 
+                  href="#" 
                   className="block py-3 px-4 bg-blue-50 text-blue-600 font-bold rounded-lg text-center hover:bg-blue-100 transition-colors duration-300 flex items-center justify-center gap-2"
                 >
                   <span>📞</span>

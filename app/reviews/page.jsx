@@ -116,22 +116,6 @@ export default function Reviews() {
         </div>
       </section>
 
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl mb-4 text-blue-500">{stat.icon}</div>
-                <div className="text-3xl font-black text-blue-600 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-8 bg-gray-50 border-y border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-4 justify-center">
@@ -207,31 +191,6 @@ export default function Reviews() {
         </div>
       </section>
 
-      <section className="py-16 bg-blue-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
-            Поделитесь своим опытом
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Ваше мнение поможет нам становиться лучше и поможет другим пациентам сделать правильный выбор
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button 
-              onClick={() => setIsReviewModalOpen(true)}
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2"
-            >
-              <span>✏️</span>
-              Написать отзыв
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
-              <span>📞</span>
-              Задать вопрос
-            </button>
-          </div>
-        </div>
-      </section>
-
       <Footer />
 
       {isReviewModalOpen && (
@@ -254,13 +213,13 @@ export default function Reviews() {
                   type="text" 
                   required
                   placeholder="Иван Иванов" 
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
+                  className="w-full px-4 text-gray-900 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
                 />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Врач</label>
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300">
+                <select className="w-full text-gray-900 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300">
                   <option>Выберите врача</option>
                   <option>Др. Иванова Анна Сергеевна</option>
                   <option>Др. Петров Владимир Игоревич</option>
@@ -293,11 +252,11 @@ export default function Reviews() {
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Текст отзыва</label>
+                <label className="block text-sm font-medium mb-2 text-gray-900">Текст отзыва</label>
                 <textarea 
                   rows="4"
                   placeholder="Поделитесь вашими впечатлениями..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
+                  className="w-full text-gray-900 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
                 ></textarea>
               </div>
               

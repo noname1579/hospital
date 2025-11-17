@@ -205,25 +205,6 @@ export default function Doctors() {
         </div>
       </section>
 
-      <section className="py-16 bg-blue-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
-            Не нашли нужного специалиста?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Позвоните нам, и мы поможем подобрать врача именно для вашего случая
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">
-              📞 +7 (999) 999-99-99
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
-              📧 Написать нам
-            </button>
-          </div>
-        </div>
-      </section>
-
       <Footer />
 
       {isModalOpen && selectedDoctor && (
