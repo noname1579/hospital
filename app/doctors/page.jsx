@@ -191,7 +191,7 @@ export default function Doctors() {
                 <div className="flex gap-3">
                   <button
                     onClick={() => handleBookAppointment(doctor)}
-                    className="flex-1 bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300"
+                    className="flex-1 bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all cursor-pointer duration-300"
                   >
                     Записаться
                   </button>

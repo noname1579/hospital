@@ -243,7 +243,7 @@ const reviews = [
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button 
               onClick={() => setActiveTab('doctors')}
-              className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg cursor-pointer hover:shadow-xl"
             >
               Записаться на прием
             </button>
@@ -320,46 +320,10 @@ const reviews = [
                     
                     <button
                       onClick={() => handleBookAppointment(doctor)}
-                      className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300"
+                      className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all cursor-pointer duration-300"
                     >
                       Записаться на прием
                     </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'reviews' && (
-            <div className="space-y-8">
-              <div className="flex justify-between items-center">
-                <h2 className="text-3xl font-bold text-gray-800">Отзывы пациентов</h2>
-                <button className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300">
-                  Написать отзыв
-                </button>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {reviews.map((review) => (
-                  <div key={review.id} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center font-semibold text-blue-600">
-                        {review.name.split(' ').map(n => n[0]).join('')}
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-800">{review.name}</h4>
-                        <div className="flex items-center gap-2">
-                          <span className="text-yellow-500">{"⭐".repeat(review.rating)}</span>
-                          <span className="text-gray-500 text-sm">{review.date}</span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-600 mb-3 leading-relaxed">{review.text}</p>
-                    
-                    <div className="text-sm text-blue-600 font-medium">
-                      Врач: {review.doctor}
-                    </div>
                   </div>
                 ))}
               </div>

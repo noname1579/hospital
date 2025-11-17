@@ -136,16 +136,6 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="fixed bottom-6 right-6 z-40">
-        <button className="bg-green-500 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 group">
-          <div className="flex items-center gap-2">
-            <span className="text-xl">📞</span>
-            <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-500 whitespace-nowrap">
-              Записаться
-            </span>
-          </div>
-        </button>
-      </div>
     </footer>
   )
 }
