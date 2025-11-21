@@ -166,10 +166,10 @@ export default function Doctors() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="pt-32 pb-20 bg-linear-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Наши врачи
             </span>
           </h1>
@@ -218,7 +218,7 @@ export default function Doctors() {
                   </div>
                 </div>
                 
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">{doctor.description}</p>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed grow">{doctor.description}</p>
                 
                 <div className="space-y-2 mb-4">
                   <div className="flex justify-between text-sm">

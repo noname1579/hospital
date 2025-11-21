@@ -53,7 +53,7 @@ export default function Header() {
             
             <Link 
               href="/doctors"
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg"
+              className="bg-linear-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg"
             >
               Записаться
             </Link>
@@ -81,7 +81,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block py-3 px-4 text-gray-700 font-medium rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 flex items-center gap-3"
+                  className="py-3 px-4 text-gray-700 font-medium rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 flex items-center gap-3"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="w-2 h-2 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -92,7 +92,7 @@ export default function Header() {
               <div className="pt-4 border-t border-gray-200 space-y-4">
                 <a 
                   href="#" 
-                  className="block py-3 px-4 bg-blue-50 text-blue-600 font-bold rounded-lg text-center hover:bg-blue-100 transition-colors duration-300 flex items-center justify-center gap-2"
+                  className="py-3 px-4 bg-blue-50 text-blue-600 font-bold rounded-lg text-center hover:bg-blue-100 transition-colors duration-300 flex items-center justify-center gap-2"
                 >
                   <span>📞</span>
                   +7 (999) 999-99-99
@@ -100,7 +100,7 @@ export default function Header() {
                 
                 <Link 
                   href="/doctors"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full bg-linear-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span>📅</span>

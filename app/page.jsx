@@ -149,7 +149,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 to-indigo-100 overflow-hidden">
         <div className="absolute inset-0 bg-white/50"></div>
         
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               MedCare
             </span>
             <br />
