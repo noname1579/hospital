@@ -88,10 +88,10 @@ export default function Services() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="pt-32 pb-20 bg-linear-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Наши услуги
             </span>
           </h1>
@@ -127,7 +127,7 @@ export default function Services() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div key={service.id} className={`bg-white rounded-2xl p-6 shadow-lg border hover:shadow-xl transition-all duration-300 group ${
+              <div key={service.id} className={`bg-white rounded-2xl p-6 shadow-lg border hover:shadow-xl transition-all duration-300 group flex flex-col h-full ${
                 service.popular ? 'border-blue-300 relative' : 'border-gray-100'
               }`}>
                 {service.popular && (
@@ -136,46 +136,45 @@ export default function Services() {
                   </div>
                 )}
                 
-                <div className="mb-4">
-                  <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-600 mb-3">{service.description}</p>
+                <div className="flex-1">
+                  <div className="mb-4">
+                    <h3 className="font-bold text-xl text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-600 mb-3">{service.description}</p>
+                  </div>
+                  
+                  <div className="space-y-3 mb-4">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Категория:</span>
+                      <span className="font-semibold text-blue-600">{service.category}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Стоимость:</span>
+                      <span className="font-semibold text-gray-800">{service.price}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Длительность:</span>
+                      <span className="font-semibold text-gray-800">{service.duration}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-800 mb-2">Включает:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, index) => (
+                        <li key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                          <span className="text-blue-500">✓</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
                 
-                <div className="space-y-3 mb-4">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Категория:</span>
-                    <span className="font-semibold text-blue-600">{service.category}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Стоимость:</span>
-                    <span className="font-semibold text-gray-800">{service.price}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Длительность:</span>
-                    <span className="font-semibold text-gray-800">{service.duration}</span>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-800 mb-2">Включает:</h4>
-                  <ul className="space-y-1">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                        <span className="text-blue-500">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="flex gap-3">
+                <div className="flex gap-3 mt-auto pt-4">
                   <button className="flex-1 bg-blue-600 text-white py-3 rounded-xl font-semibold cursor-pointer hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     Записаться
-                  </button>
-                  <button className="px-4 border-2 border-gray-300 text-gray-700 rounded-xl hover:border-blue-500 hover:text-blue-600 transition-all duration-300 hover:shadow-md">
-                    ℹ️
                   </button>
                 </div>
               </div>

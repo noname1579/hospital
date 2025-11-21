@@ -48,10 +48,10 @@ export default function Contacts() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="pt-32 pb-20 bg-linear-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Контакты
             </span>
           </h1>
