@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -37,7 +37,7 @@ export default function Home() {
   const doctors = [
   {
     id: 1,
-    name: "Др. Иванова Анна Сергеевна",
+    name: "Иванова Анна Сергеевна",
     specialty: "Терапевт",
     experience: "15 лет",
     rating: 4.9,
@@ -48,7 +48,7 @@ export default function Home() {
   },
   {
     id: 2,
-    name: "Др. Петров Владимир Игоревич",
+    name: "Петров Владимир Игоревич",
     specialty: "Кардиолог",
     experience: "12 лет",
     rating: 4.8,
@@ -59,7 +59,7 @@ export default function Home() {
   },
   {
     id: 3,
-    name: "Др. Сидорова Мария Константиновна",
+    name: "Сидорова Мария Константиновна",
     specialty: "Невролог",
     experience: "10 лет",
     rating: 4.9,
@@ -70,7 +70,7 @@ export default function Home() {
   },
   {
     id: 4,
-    name: "Др. Козлов Дмитрий Александрович",
+    name: "Козлов Дмитрий Александрович",
     specialty: "Стоматолог",
     experience: "8 лет",
     rating: 4.7,
@@ -81,7 +81,7 @@ export default function Home() {
   },
   {
     id: 5,
-    name: "Др. Николаева Елена Викторовна",
+    name: "Николаева Елена Викторовна",
     specialty: "Педиатр",
     experience: "14 лет",
     rating: 4.9,
@@ -92,7 +92,7 @@ export default function Home() {
   },
   {
     id: 6,
-    name: "Др. Волков Артем Сергеевич",
+    name: "Волков Артем Сергеевич",
     specialty: "Хирург",
     experience: "18 лет",
     rating: 4.8,
@@ -103,7 +103,7 @@ export default function Home() {
   },
   {
     id: 7,
-    name: "Др. Орлова Ольга Дмитриевна",
+    name: "Орлова Ольга Дмитриевна",
     specialty: "Гинеколог",
     experience: "11 лет",
     rating: 4.7,
@@ -114,7 +114,7 @@ export default function Home() {
   },
   {
     id: 8,
-    name: "Др. Федоров Михаил Андреевич",
+    name: "Федоров Михаил Андреевич",
     specialty: "Офтальмолог",
     experience: "9 лет",
     rating: 4.6,
@@ -122,73 +122,6 @@ export default function Home() {
     image: "👨‍⚕️",
     schedule: ["Вт", "Чт", "Пт", "Сб"],
     price: "1600 ₽"
-  }
-]
-
-const reviews = [
-  {
-    id: 1,
-    name: "Александр Петров",
-    rating: 5,
-    date: "15.12.2024",
-    text: "Отличная клиника! Врачи внимательные, оборудование современное. Записался через приложение без очереди.",
-    doctor: "Др. Иванова А.С."
-  },
-  {
-    id: 2,
-    name: "Мария Сидорова",
-    rating: 4,
-    date: "14.12.2024",
-    text: "Хороший сервис, но немного пришлось подождать. Доктор Петров очень профессионально все объяснил.",
-    doctor: "Др. Петров В.И."
-  },
-  {
-    id: 3,
-    name: "Иван Козлов",
-    rating: 5,
-    date: "13.12.2024",
-    text: "Лучшая поликлиника в городе! Современный подход, удобная запись онлайн, вежливый персонал.",
-    doctor: "Др. Сидорова М.К."
-  },
-  {
-    id: 4,
-    name: "Екатерина Волкова",
-    rating: 5,
-    date: "12.12.2024",
-    text: "Доктор Николаева - прекрасный педиатр! Ребенок перестал бояться врачей после визита к ней.",
-    doctor: "Др. Николаева Е.В."
-  },
-  {
-    id: 5,
-    name: "Сергей Орлов",
-    rating: 4,
-    date: "11.12.2024",
-    text: "Качественная операция, хороший послеоперационный уход. Доктор Волков - профессионал своего дела.",
-    doctor: "Др. Волков А.С."
-  },
-  {
-    id: 6,
-    name: "Анна Федорова",
-    rating: 5,
-    date: "10.12.2024",
-    text: "Очень деликатный и внимательный врач. Доктор Орлова подробно ответила на все вопросы.",
-    doctor: "Др. Орлова О.Д."
-  },
-  {
-    id: 7,
-    name: "Дмитрий Николаев",
-    rating: 4,
-    date: "09.12.2024",
-    text: "Быстро проверил зрение, выписал хорошие очки. Доктор Федоров вежлив и компетентен.",
-    doctor: "Др. Федоров М.А."
-  },
-  {
-    id: 8,
-    name: "Ольга Козлова",
-    rating: 5,
-    date: "08.12.2024",
-    text: "Отличный стоматолог! Безболезненное лечение, современное оборудование. Рекомендую!",
-    doctor: "Др. Козлов Д.А."
   }
 ]
 
@@ -241,91 +174,107 @@ const reviews = [
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button 
-              onClick={() => setActiveTab('doctors')}
+            <a 
+              href='doctors'
               className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg cursor-pointer hover:shadow-xl"
             >
               Записаться на прием
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl mb-3">{stat.icon}</div>
-                <div className="text-3xl font-black text-blue-600 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
+            </a>
           </div>
         </div>
       </section>
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex border-b border-gray-200 mb-8">
-            <button
-              onClick={() => setActiveTab('doctors')}
-              className={`px-6 py-3 font-semibold border-b-2 transition-all duration-300 ${
-                activeTab === 'doctors'
-                  ? 'border-blue-600 text-blue-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700'
-              }`}
-            >
-              Врачи и расписание
-            </button>
-          </div>
 
-          {activeTab === 'doctors' && (
+          {(
             <div className="space-y-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">Наши специалисты</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {doctors.map((doctor) => (
-                  <div key={doctor.id} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl">
-                        {doctor.image}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-4xl font-bold text-gray-800 mb-6">
+                    Современная медицина <span className="text-blue-600">для всей семьи</span>
+                  </h2>
+                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                    MedCare — это современная поликлиника, где сочетаются передовые медицинские 
+                    технологии и индивидуальный подход к каждому пациенту. Мы создали пространство, 
+                    где вам окажут квалифицированную помощь в комфортных условиях.
+                  </p>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600">
+                        ✓
                       </div>
-                      <div className="flex-1">
-                        <h3 className="font-bold text-lg text-gray-800">{doctor.name}</h3>
-                        <p className="text-blue-600 font-semibold">{doctor.specialty}</p>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span className="text-yellow-500">⭐ {doctor.rating}</span>
-                          <span className="text-gray-500 text-sm">({doctor.reviews} отзывов)</span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-3 mb-4">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-700">Опыт работы:</span>
-                        <span className="font-semibold text-gray-800">{doctor.experience}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-700">Прием:</span>
-                        <span className="font-semibold text-gray-800">{doctor.price}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-700">График:</span>
-                        <span className="font-semibold text-gray-800">{doctor.schedule.join(', ')}</span>
+                      <div>
+                        <h3 className="font-semibold text-gray-800">Высококвалифицированные специалисты</h3>
+                        <p className="text-gray-600 text-sm">Врачи с опытом работы от 5 лет</p>
                       </div>
                     </div>
                     
-                    <button
-                      onClick={() => handleBookAppointment(doctor)}
-                      className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all cursor-pointer duration-300"
-                    >
-                      Записаться на прием
-                    </button>
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
+                        ⚡
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-800">Современное оборудование</h3>
+                        <p className="text-gray-600 text-sm">Диагностика и лечение по последним стандартам</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600">
+                        💻
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-800">Цифровые решения</h3>
+                        <p className="text-gray-600 text-sm">Электронная карта и онлайн-запись 24/7</p>
+                      </div>
+                    </div>
                   </div>
-                ))}
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-4">
+                    <div className="bg-blue-50 rounded-2xl p-6 text-center">
+                      <div className="text-3xl font-black text-blue-600 mb-2">15+</div>
+                      <div className="text-gray-700 font-medium">Медицинских направлений</div>
+                    </div>
+                    <div className="bg-green-50 rounded-2xl p-6 text-center">
+                      <div className="text-3xl font-black text-green-600 mb-2">98%</div>
+                      <div className="text-gray-700 font-medium">Пациентов рекомендуют нас</div>
+                    </div>
+                  </div>
+                  <div className="space-y-4 mt-8">
+                    <div className="bg-purple-50 rounded-2xl p-6 text-center">
+                      <div className="text-3xl font-black text-purple-600 mb-2">10 мин</div>
+                      <div className="text-gray-700 font-medium">Среднее время приема</div>
+                    </div>
+                    <div className="bg-orange-50 rounded-2xl p-6 text-center">
+                      <div className="text-3xl font-black text-orange-600 mb-2">24/7</div>
+                      <div className="text-gray-700 font-medium">Онлайн запись</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-blue-100 rounded-2xl p-8 text-black">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="text-center">
+                    <div className="text-3xl mb-3">🏥</div>
+                <h3 className="font-bold text-lg mb-2">Удобное расположение</h3>
+                    <p className="text-blue-900">Центр города</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl mb-3">🕒</div>
+                    <h3 className="font-bold text-lg mb-2">Гибкий график</h3>
+                    <p className="text-blue-900">Работаем с 8:00 до 21:00</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl mb-3">🚗</div>
+                    <h3 className="font-bold text-lg mb-2">Парковка</h3>
+                    <p className="text-blue-900">Бесплатная парковка для пациентов</p>
+                  </div>
+                </div>
               </div>
             </div>
           )}
