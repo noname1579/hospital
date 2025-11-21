@@ -39,7 +39,7 @@ export default function Footer() {
       },
       { 
         name: 'Часы работы', 
-        value: 'Пн-Вс: 8:00-21:00,', 
+        value: 'Пн-Вс: 8:00-21:00', 
         icon: '🕒' 
       }
     ]
@@ -51,7 +51,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
           
           <div className="lg:col-span-1">
-            <Image src={logo} width={150} />
+            <h1 className='text-3xl mb-5'>MedCare</h1>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
               Современная медицинская клиника, предоставляющая полный спектр 
