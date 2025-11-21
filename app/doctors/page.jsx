@@ -11,7 +11,6 @@ import img3 from './../../public/3.jpg'
 import img4 from './../../public/4.jpg'
 import img5 from './../../public/5.jpg'
 import img6 from './../../public/6.jpg'
-import img7 from './../../public/7.jpg'
 
 export default function Doctors() {
   const [selectedSpecialty, setSelectedSpecialty] = useState('all')
