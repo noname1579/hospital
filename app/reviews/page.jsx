@@ -214,10 +214,12 @@ export default function Reviews() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Врач</label>
                 <select className="w-full text-gray-900 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300">
                   <option>Выберите врача</option>
-                  <option>Др. Иванова Анна Сергеевна</option>
-                  <option>Др. Петров Владимир Игоревич</option>
-                  <option>Др. Сидорова Мария Константиновна</option>
-                  <option>Др. Козлов Дмитрий Александрович</option>
+                  <option>Иванова Анна Сергеевна</option>
+                  <option>Петров Владимир Игоревич</option>
+                  <option>Сидоров Максим Константинович</option>
+                  <option>Козлов Дмитрий Александрович</option>
+                  <option>Николаев Олег Викторович</option>
+                  <option>Орлов Сергей Михайлович</option>
                 </select>
               </div>
               
