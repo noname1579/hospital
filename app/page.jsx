@@ -1,15 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { TailChase } from 'ldrs/react'
+import 'ldrs/react/TailChase.css'
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [activeTab, setActiveTab] = useState('doctors')
   const [selectedDoctor, setSelectedDoctor] = useState(null)
   const [selectedDate, setSelectedDate] = useState('')
   const [selectedTime, setSelectedTime] = useState('')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   const getAvailableDates = () => {
     const dates = []
@@ -34,115 +44,27 @@ export default function Home() {
     '14:00', '15:00', '16:00', '17:00'
   ]
 
-  const doctors = [
-  {
-    id: 1,
-    name: "Иванова Анна Сергеевна",
-    specialty: "Терапевт",
-    experience: "15 лет",
-    rating: 4.9,
-    reviews: 127,
-    image: "👩‍⚕️",
-    schedule: ["Пн", "Вт", "Чт", "Пт"],
-    price: "1500 ₽"
-  },
-  {
-    id: 2,
-    name: "Петров Владимир Игоревич",
-    specialty: "Кардиолог",
-    experience: "12 лет",
-    rating: 4.8,
-    reviews: 89,
-    image: "👨‍⚕️",
-    schedule: ["Вт", "Ср", "Чт", "Сб"],
-    price: "2000 ₽"
-  },
-  {
-    id: 3,
-    name: "Сидорова Мария Константиновна",
-    specialty: "Невролог",
-    experience: "10 лет",
-    rating: 4.9,
-    reviews: 156,
-    image: "👩‍⚕️",
-    schedule: ["Пн", "Ср", "Пт", "Сб"],
-    price: "1800 ₽"
-  },
-  {
-    id: 4,
-    name: "Козлов Дмитрий Александрович",
-    specialty: "Стоматолог",
-    experience: "8 лет",
-    rating: 4.7,
-    reviews: 203,
-    image: "👨‍⚕️",
-    schedule: ["Пн", "Вт", "Ср", "Чт", "Пт"],
-    price: "2200 ₽"
-  },
-  {
-    id: 5,
-    name: "Николаева Елена Викторовна",
-    specialty: "Педиатр",
-    experience: "14 лет",
-    rating: 4.9,
-    reviews: 215,
-    image: "👩‍⚕️",
-    schedule: ["Пн", "Вт", "Ср", "Пт"],
-    price: "1700 ₽"
-  },
-  {
-    id: 6,
-    name: "Волков Артем Сергеевич",
-    specialty: "Хирург",
-    experience: "18 лет",
-    rating: 4.8,
-    reviews: 167,
-    image: "👨‍⚕️",
-    schedule: ["Вт", "Ср", "Чт", "Пт"],
-    price: "2500 ₽"
-  },
-  {
-    id: 7,
-    name: "Орлова Ольга Дмитриевна",
-    specialty: "Гинеколог",
-    experience: "11 лет",
-    rating: 4.7,
-    reviews: 142,
-    image: "👩‍⚕️",
-    schedule: ["Пн", "Ср", "Чт", "Сб"],
-    price: "1900 ₽"
-  },
-  {
-    id: 8,
-    name: "Федоров Михаил Андреевич",
-    specialty: "Офтальмолог",
-    experience: "9 лет",
-    rating: 4.6,
-    reviews: 98,
-    image: "👨‍⚕️",
-    schedule: ["Вт", "Чт", "Пт", "Сб"],
-    price: "1600 ₽"
-  }
-]
-
-  const stats = [
-    { number: "25,000+", label: "Довольных пациентов", icon: "😊" },
-    { number: "15+", label: "Врачей специалистов", icon: "👨‍⚕️" },
-    { number: "98%", label: "Рекомендуют клинику", icon: "⭐" },
-    { number: "5-10 мин", label: "Среднее время ожидания", icon: "⏱️" }
-  ]
-
-  const handleBookAppointment = (doctor) => {
-    setSelectedDoctor(doctor)
-    setIsModalOpen(true)
-  }
-
   const handleSubmitAppointment = (e) => {
     e.preventDefault()
     alert(`Запись к ${selectedDoctor.name} на ${selectedDate} в ${selectedTime} подтверждена!`)
     setIsModalOpen(false)
     setSelectedDate('')
     setSelectedTime('')
+  }
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <TailChase
+            size="60"
+            speed="1.75" 
+            color="rgb(37, 99, 235)"
+          />
+          <p className="mt-4 text-lg text-gray-600 font-medium">Загрузка...</p>
+        </div>
+      </div>
+    )
   }
 
   return (

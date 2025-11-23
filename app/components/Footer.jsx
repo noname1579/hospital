@@ -8,7 +8,7 @@ export default function Footer() {
 
   const navigation = {
     main: [
-      { name: 'Главная', href: 'home' },
+      { name: 'Главная', href: '' },
       { name: 'Врачи', href: 'doctors' },
       { name: 'Услуги', href: 'services' },
       { name: 'Отзывы', href: 'reviews' },
